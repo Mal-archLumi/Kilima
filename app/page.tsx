@@ -1,3 +1,4 @@
+// /app/page.tsx
 import { StatsCards } from "@/components/dashboard/stats-cards"
 import { RecentClaims } from "@/components/dashboard/recent-claims"
 import { VerificationMap } from "@/components/dashboard/verification-map"

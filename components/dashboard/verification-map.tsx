@@ -1,3 +1,4 @@
+// /components/dashboard/verification-map.tsx
 "use client"
 
 import { useState } from "react"

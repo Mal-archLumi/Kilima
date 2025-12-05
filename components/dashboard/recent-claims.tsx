@@ -1,3 +1,4 @@
+// /components/dashboard/recent-claims.tsx
 import { CheckCircle, XCircle, Clock } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 

@@ -1,9 +1,11 @@
+// /components/dashboard/sidebar.tsx
 "use client"
 
 import { Home, FileCheck, Map, Users, ShieldAlert, Settings, BarChart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
 
 const navItems = [
   { name: "Dashboard", icon: Home, href: "/" },
@@ -25,17 +27,18 @@ export function Sidebar() {
           {navItems.map((item) => {
             const isActive = pathname === item.href
             return (
-              <Button
-                key={item.name}
-                variant={isActive ? "secondary" : "ghost"}
-                className={cn(
-                  "w-full justify-start",
-                  isActive && "bg-secondary"
-                )}
-              >
-                <item.icon className="mr-3 h-4 w-4" />
-                {item.name}
-              </Button>
+              <Link href={item.href} key={item.name}>
+                <Button
+                  variant={isActive ? "secondary" : "ghost"}
+                  className={cn(
+                    "w-full justify-start",
+                    isActive && "bg-secondary"
+                  )}
+                >
+                  <item.icon className="mr-3 h-4 w-4" />
+                  {item.name}
+                </Button>
+              </Link>
             )
           })}
         </nav>
